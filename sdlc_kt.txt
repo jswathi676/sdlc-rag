@@ -1,0 +1,34 @@
+Software Development Life Cycle (SDLC)
+
+Overview:
+SDLC is a structured process used to plan, design, build, test, deploy, and maintain software systems. It helps teams manage time, cost, quality, and risk during software development.
+
+Planning:
+Planning defines project goals, scope, schedule, resources, and feasibility. It identifies stakeholders and dependencies before the project starts.
+
+Requirement Analysis:
+Requirement analysis is the process of understanding the needs of users and stakeholders. It includes functional requirements and non-functional requirements such as performance, security, and usability.
+
+System Design:
+System design converts requirements into a technical blueprint. It includes architecture, components, database design, interfaces, and system behavior.
+
+Implementation:
+Implementation is the coding phase where developers build the software according to the approved design. Good coding standards, version control, and code reviews improve quality.
+
+Testing:
+Testing verifies whether the software works correctly. It includes unit testing, integration testing, system testing, regression testing, and user acceptance testing.
+
+Deployment:
+Deployment is the process of delivering software to a target environment such as development, staging, or production. It includes configuration, release management, and rollback planning.
+
+Maintenance:
+Maintenance includes fixing defects, improving performance, adding features, and adapting the system to changing needs after release.
+
+Agile and DevOps:
+Agile reduces risk using iterative development and feedback. DevOps improves collaboration between development and operations using automation, continuous integration, and monitoring.
+
+Governance:
+Governance ensures quality control, review checkpoints, approvals, and documentation across the software lifecycle.
+
+Summary:
+SDLC is important because it makes software development organized, measurable, and reliable. It supports quality assurance and helps deliver software that meets business goals.
