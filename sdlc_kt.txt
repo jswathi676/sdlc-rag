@@ -1,34 +1,856 @@
-Software Development Life Cycle (SDLC)
+========================================================
+KNOWLEDGE TRANSFER DOCUMENT
+Project: Enterprise Software Development Life Cycle (SDLC)
+Version: 3.1
+Date: August 2026
+Prepared by: Engineering Excellence Team
+========================================================
 
-Overview:
-SDLC is a structured process used to plan, design, build, test, deploy, and maintain software systems. It helps teams manage time, cost, quality, and risk during software development.
+TABLE OF CONTENTS
+1. Introduction to SDLC
+2. SDLC Models and Methodologies
+3. Phase 1 – Project Initiation and Planning
+4. Phase 2 – Requirement Analysis
+5. Phase 3 – System Design
+6. Phase 4 – Implementation / Coding
+7. Phase 5 – Testing and Quality Assurance
+8. Phase 6 – Deployment and Release Management
+9. Phase 7 – Maintenance and Support
+10. Agile Methodology Deep Dive
+11. DevOps and CI/CD Pipeline
+12. Risk Management in SDLC
+13. Documentation Standards
+14. Security in SDLC (Secure SDLC)
+15. Tools and Technology Stack
+16. Team Roles and Responsibilities
+17. Metrics and KPIs
+18. Governance and Compliance
+19. Case Study – Sample Project Walkthrough
+20. Glossary
 
-Planning:
-Planning defines project goals, scope, schedule, resources, and feasibility. It identifies stakeholders and dependencies before the project starts.
+--------------------------------------------------------
+1. INTRODUCTION TO SDLC
+--------------------------------------------------------
 
-Requirement Analysis:
-Requirement analysis is the process of understanding the needs of users and stakeholders. It includes functional requirements and non-functional requirements such as performance, security, and usability.
+The Software Development Life Cycle (SDLC) is a systematic process for planning, creating, testing, deploying, and maintaining software applications. It provides a structured framework that guides teams through every phase of software development with clearly defined activities, deliverables, and exit criteria at each stage.
 
-System Design:
-System design converts requirements into a technical blueprint. It includes architecture, components, database design, interfaces, and system behavior.
+The primary goals of SDLC are:
+- Deliver high-quality software that meets or exceeds customer expectations.
+- Complete the project within time and budget constraints.
+- Manage risk proactively throughout the project lifecycle.
+- Enable repeatable, measurable, and improvable processes.
+- Ensure traceability from business requirements to deployed functionality.
 
-Implementation:
-Implementation is the coding phase where developers build the software according to the approved design. Good coding standards, version control, and code reviews improve quality.
+SDLC is not a single methodology but a category of frameworks. Organizations select and adapt an SDLC model based on project size, complexity, risk profile, and team structure. Common SDLC models include Waterfall, V-Model, Iterative, Spiral, Agile, and DevOps.
 
-Testing:
-Testing verifies whether the software works correctly. It includes unit testing, integration testing, system testing, regression testing, and user acceptance testing.
+The importance of SDLC has grown significantly as software systems have become critical business infrastructure. A well-executed SDLC reduces rework, prevents defects from reaching production, and provides stakeholders with visibility into project progress.
 
-Deployment:
-Deployment is the process of delivering software to a target environment such as development, staging, or production. It includes configuration, release management, and rollback planning.
+--------------------------------------------------------
+2. SDLC MODELS AND METHODOLOGIES
+--------------------------------------------------------
 
-Maintenance:
-Maintenance includes fixing defects, improving performance, adding features, and adapting the system to changing needs after release.
+2.1 Waterfall Model
+The Waterfall model is a linear sequential approach where each phase must be completed before the next begins. Requirements are locked at the start. It works best for projects with well-understood, stable requirements. Disadvantages include limited flexibility for changes and late defect discovery.
 
-Agile and DevOps:
-Agile reduces risk using iterative development and feedback. DevOps improves collaboration between development and operations using automation, continuous integration, and monitoring.
+Phases: Requirements → Design → Implementation → Testing → Deployment → Maintenance
 
-Governance:
-Governance ensures quality control, review checkpoints, approvals, and documentation across the software lifecycle.
+2.2 V-Model (Verification and Validation)
+The V-Model extends Waterfall by pairing each development phase with a corresponding testing phase. For example, unit design is paired with unit testing, and system design with system testing. This model emphasizes early test planning.
 
-Summary:
-SDLC is important because it makes software development organized, measurable, and reliable. It supports quality assurance and helps deliver software that meets business goals.
+2.3 Iterative Model
+The Iterative model develops software in repeated cycles, each producing a working version of the software. Each iteration adds new functionality. It allows feedback incorporation between iterations but requires careful scope management.
+
+2.4 Spiral Model
+The Spiral model combines iterative development with risk analysis. Each loop of the spiral covers planning, risk assessment, engineering, and evaluation. It is suited for large, complex, high-risk projects.
+
+2.5 Agile Model
+Agile is an iterative and incremental methodology that emphasizes collaboration, flexibility, and customer feedback. Work is divided into short sprints (usually 2–4 weeks). Frameworks like Scrum, Kanban, and SAFe implement Agile principles.
+
+Key Agile values (from the Agile Manifesto):
+- Individuals and interactions over processes and tools
+- Working software over comprehensive documentation
+- Customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+2.6 DevOps Model
+DevOps extends Agile by integrating development and operations teams. It focuses on automation, continuous delivery, and monitoring to reduce time to market and improve reliability.
+
+2.7 Hybrid Models
+Many enterprises use hybrid models combining Waterfall governance with Agile execution, or Agile development with DevOps deployment pipelines.
+
+--------------------------------------------------------
+3. PHASE 1 – PROJECT INITIATION AND PLANNING
+--------------------------------------------------------
+
+3.1 Purpose
+The planning phase establishes the foundation for the entire project. It defines what will be built, why it is needed, who is responsible, how it will be done, and when it will be delivered.
+
+3.2 Key Activities
+- Business case development: Articulate the problem or opportunity, expected ROI, and strategic alignment.
+- Feasibility study: Technical feasibility (can we build it?), financial feasibility (can we afford it?), operational feasibility (will it be used?), and legal feasibility.
+- Stakeholder identification: Identify all parties with interest in the project — sponsors, end users, compliance teams, vendors, and integration partners.
+- Project charter: A formal document authorizing the project and defining high-level objectives, constraints, and the project manager's authority.
+- Scope definition: Define in-scope and out-of-scope items to prevent scope creep.
+- Work Breakdown Structure (WBS): Decompose the project into manageable tasks and work packages.
+- Effort and cost estimation: Use techniques such as Function Point Analysis, Use Case Points, Planning Poker, or three-point estimation (PERT).
+- Schedule development: Create a project timeline using Gantt charts or sprint planning boards.
+- Resource planning: Identify team members, tools, infrastructure, and third-party dependencies.
+- Risk register initialization: Document known risks with probability, impact, and mitigation strategies.
+- Communication plan: Define how project status, decisions, and issues will be communicated to stakeholders.
+
+3.3 Deliverables
+- Project Charter
+- Feasibility Report
+- Project Plan (schedule, budget, resources)
+- Risk Register (initial version)
+- Stakeholder Register
+- Communication Plan
+
+3.4 Exit Criteria
+Planning is complete when the project charter is signed by the sponsor, the scope is agreed upon, the project plan is baselined, and the team is assembled.
+
+--------------------------------------------------------
+4. PHASE 2 – REQUIREMENT ANALYSIS
+--------------------------------------------------------
+
+4.1 Purpose
+Requirement analysis transforms business needs into clear, testable, and agreed-upon specifications. Poorly defined requirements are the leading cause of project failure, rework, and cost overruns.
+
+4.2 Types of Requirements
+Functional Requirements: Describe what the system must do. Example: "The system shall allow users to reset their password via email."
+
+Non-Functional Requirements (NFRs):
+- Performance: Response time, throughput, latency
+- Scalability: Ability to handle growing load
+- Availability: Uptime SLA (e.g., 99.9%)
+- Security: Authentication, authorization, encryption
+- Usability: Accessibility, user experience
+- Maintainability: Code quality, modularity
+- Compliance: GDPR, HIPAA, ISO standards
+
+Transition Requirements: Describe what is needed to transition from the current state to the future state (e.g., data migration).
+
+4.3 Requirement Elicitation Techniques
+- Interviews: One-on-one or group sessions with stakeholders
+- Workshops: Facilitated group sessions (e.g., JAD – Joint Application Development)
+- Surveys and questionnaires
+- Observation / job shadowing
+- Document analysis: Review existing systems, manuals, and reports
+- Prototyping: Build a rough UI mockup to validate understanding
+- Use case / user story development
+
+4.4 Requirement Documentation
+Requirements are documented as:
+- Business Requirements Document (BRD)
+- System Requirements Specification (SRS)
+- User Stories (in Agile): "As a [user], I want [feature] so that [benefit]"
+- Use Case Specifications
+- Acceptance Criteria for each requirement
+
+4.5 Requirement Management
+- Use tools like JIRA, Azure DevOps, or Confluence to track requirements
+- Maintain a Requirements Traceability Matrix (RTM) to link requirements to design, code, and test cases
+- Apply change control for any requirement changes after baseline
+
+4.6 Deliverables
+- Business Requirements Document (BRD)
+- System Requirements Specification (SRS)
+- Requirements Traceability Matrix (RTM)
+- Approved User Stories / Use Cases
+
+4.7 Exit Criteria
+All requirements are documented, reviewed, prioritized, and signed off by the product owner and key stakeholders. The RTM first version is established.
+
+--------------------------------------------------------
+5. PHASE 3 – SYSTEM DESIGN
+--------------------------------------------------------
+
+5.1 Purpose
+System design translates requirements into a technical blueprint. It defines the architecture, components, data flows, interfaces, and technology choices that will guide implementation.
+
+5.2 High-Level Design (HLD)
+HLD covers system architecture decisions:
+- Architectural patterns: Monolithic, Microservices, Event-Driven, Serverless, Layered
+- Technology stack selection: Languages, frameworks, databases, cloud platform
+- Component diagram: Major system components and their interactions
+- Deployment diagram: How components are deployed across infrastructure
+- Integration design: APIs, message queues, third-party services
+
+5.3 Low-Level Design (LLD)
+LLD covers detailed component design:
+- Class diagrams and sequence diagrams
+- Database schema design: Tables, relationships, indexes, normalization
+- API contract design: REST or GraphQL endpoint specifications
+- Algorithm design: Pseudocode for complex logic
+- Error handling strategy
+- Caching strategy: Redis, CDN, in-memory caches
+- Security design: Token-based auth (JWT/OAuth2), RBAC, encryption at rest and in transit
+
+5.4 Design Principles
+- SOLID principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion)
+- DRY – Don't Repeat Yourself
+- KISS – Keep It Simple, Stupid
+- YAGNI – You Aren't Gonna Need It
+- Separation of Concerns
+- 12-Factor App methodology for cloud-native applications
+
+5.5 Design Review
+All design documents undergo peer review and architecture review board (ARB) approval before implementation begins. Design defects caught at this stage cost 10x less to fix than in production.
+
+5.6 Deliverables
+- Architecture Decision Records (ADRs)
+- High-Level Design Document
+- Low-Level Design Document
+- Database Design / ERD
+- API Specification (OpenAPI / Swagger)
+- UI/UX Wireframes and Prototypes
+
+5.7 Exit Criteria
+All design documents are reviewed, approved, and baselined. Open design questions are resolved. The development environment is provisioned.
+
+--------------------------------------------------------
+6. PHASE 4 – IMPLEMENTATION / CODING
+--------------------------------------------------------
+
+6.1 Purpose
+Implementation is where the software is actually built. Developers write code based on the approved design, following established coding standards to ensure quality, readability, and maintainability.
+
+6.2 Development Environment Setup
+- Version control: Git with branching strategy (Git Flow, trunk-based development)
+- IDE setup and linting configuration
+- Local development environment via Docker or virtual environments
+- Pre-commit hooks for code formatting and linting
+
+6.3 Coding Standards
+- Follow language-specific style guides (PEP 8 for Python, Google Java Style Guide, etc.)
+- Meaningful variable and function names
+- Functions should do one thing (single responsibility)
+- Maximum function length: 40 lines (guideline)
+- Comment complex logic; avoid obvious comments
+- No hardcoded credentials or magic numbers
+- Handle all exceptions explicitly
+- Write self-documenting code
+
+6.4 Branching Strategy (Git Flow)
+- main: Production-ready code only
+- develop: Integration branch for features
+- feature/[ticket-id]-description: Feature development branches
+- release/[version]: Release preparation branches
+- hotfix/[ticket-id]-description: Emergency production fixes
+
+6.5 Code Review Process
+- All code changes require peer review via Pull Requests (PRs)
+- Reviewer checklist: correctness, security, performance, test coverage, documentation
+- PR size guideline: ideally under 400 lines changed
+- Use tools like GitHub, GitLab, or Bitbucket for PR management
+- Address all reviewer comments before merge
+
+6.6 Frontend Development
+- Component-based architecture (React, Angular, Vue)
+- Responsive design with WCAG 2.1 accessibility compliance
+- State management patterns (Redux, Zustand, Context API)
+- API integration via Axios or Fetch with proper error handling
+- Performance optimization: lazy loading, code splitting, caching
+
+6.7 Backend Development
+- RESTful API design following HTTP standards
+- Input validation and sanitization on every endpoint
+- Parameterized queries to prevent SQL injection
+- Proper HTTP status codes and error response formats
+- Rate limiting and throttling
+- Logging with correlation IDs for distributed tracing
+
+6.8 Database Development
+- Write idempotent database migration scripts
+- Version control all schema changes
+- Optimize queries: use EXPLAIN ANALYZE to identify slow queries
+- Index foreign keys and frequently queried columns
+- Avoid N+1 query problems with proper JOIN or eager loading
+
+6.9 Deliverables
+- Source code in version control
+- Unit tests (target: 80%+ code coverage)
+- Code review records
+- Updated API documentation
+
+6.10 Exit Criteria
+All planned features are implemented, all unit tests pass, code coverage meets the threshold, and code reviews are complete.
+
+--------------------------------------------------------
+7. PHASE 5 – TESTING AND QUALITY ASSURANCE
+--------------------------------------------------------
+
+7.1 Purpose
+Testing verifies that the software functions correctly, meets requirements, and is free of critical defects. Quality assurance (QA) is a broader process that ensures quality throughout the entire SDLC.
+
+7.2 Testing Types
+
+Unit Testing:
+Tests individual functions or classes in isolation. Developers write unit tests during implementation. Tools: JUnit, pytest, Jest, NUnit.
+
+Integration Testing:
+Tests the interactions between integrated components or services. Verifies that APIs, databases, and third-party services work together correctly. Tools: Postman, REST Assured, Testcontainers.
+
+System Testing:
+Tests the complete integrated system against requirements. Performed by QA engineers in a dedicated test environment. Covers functional and non-functional requirements.
+
+Regression Testing:
+Verifies that new changes have not broken existing functionality. Automated regression suites are run on every code change in CI/CD pipelines.
+
+Performance Testing:
+- Load testing: Simulate expected user load
+- Stress testing: Push beyond normal load to find breaking points
+- Soak testing: Sustained load over extended time to find memory leaks
+Tools: JMeter, Gatling, k6, Locust
+
+Security Testing:
+- Static Application Security Testing (SAST): Analyze source code for vulnerabilities
+- Dynamic Application Security Testing (DAST): Test running application
+- Penetration testing: Simulate real-world attacks
+- Dependency scanning: Check third-party libraries for known CVEs
+Tools: SonarQube, OWASP ZAP, Snyk, Veracode
+
+User Acceptance Testing (UAT):
+Business users validate the software meets their needs in a staging environment before production release. UAT sign-off is a gate for deployment.
+
+Exploratory Testing:
+Testers explore the application without predefined scripts to discover unexpected behaviors.
+
+7.3 Defect Management
+- Log defects in JIRA with severity (Critical/Major/Minor/Trivial) and priority
+- Defect lifecycle: Open → Assigned → In Progress → Fixed → Retest → Closed
+- Track defect density, escape rate, and resolution time
+- Zero tolerance for Critical and Major defects in production releases
+
+7.4 Test Environments
+- Development (DEV): Developer testing
+- System Integration Testing (SIT): Integration validation
+- User Acceptance Testing (UAT): Business validation
+- Pre-Production (STAGING): Production mirror
+- Production (PROD): Live environment
+
+7.5 Deliverables
+- Test Plan
+- Test Cases and Test Scripts
+- Defect Reports
+- Test Summary Report
+- UAT Sign-off
+
+7.6 Exit Criteria
+All test cases executed, no open Critical/Major defects, UAT sign-off obtained, performance benchmarks met.
+
+--------------------------------------------------------
+8. PHASE 6 – DEPLOYMENT AND RELEASE MANAGEMENT
+--------------------------------------------------------
+
+8.1 Purpose
+Deployment delivers tested software to target environments. Release management ensures deployments are planned, coordinated, and communicated to minimize disruption.
+
+8.2 Deployment Strategies
+
+Blue-Green Deployment:
+Run two identical production environments (blue = live, green = new version). Switch traffic to green after testing. Easy rollback by switching back to blue.
+
+Canary Deployment:
+Roll out the new version to a small subset of users (e.g., 5%). Monitor metrics. Gradually increase traffic if stable.
+
+Rolling Deployment:
+Replace instances of the old version one by one or in batches. Requires backward-compatible changes.
+
+Feature Flags:
+Deploy code without activating features. Enable features per user/group without a new deployment. Tools: LaunchDarkly, Unleash, AWS AppConfig.
+
+8.3 CI/CD Pipeline
+Continuous Integration (CI):
+- Developer pushes code to feature branch
+- Pipeline triggers: build → unit tests → code quality scan → security scan
+- PR is blocked if any stage fails
+
+Continuous Delivery (CD):
+- On merge to develop: deploy to DEV automatically
+- On merge to release: deploy to SIT automatically
+- On approval: deploy to UAT
+- On release approval: deploy to PROD
+
+Pipeline Tools: Jenkins, GitHub Actions, GitLab CI, Azure DevOps Pipelines, CircleCI
+
+8.4 Infrastructure as Code (IaC)
+- Manage infrastructure with code using Terraform, AWS CloudFormation, or Pulumi
+- Version control all IaC scripts
+- Run `terraform plan` and review before `terraform apply`
+- Use modules for reusable infrastructure components
+
+8.5 Release Process
+- Release checklist: deploy steps, rollback plan, smoke tests, stakeholder notification
+- Change Advisory Board (CAB) approval for production changes
+- Maintenance window scheduling for major releases
+- Post-deployment smoke tests to verify critical functionality
+- Monitor error rates and performance metrics for 30 minutes post-release
+
+8.6 Rollback Plan
+Every deployment must have a documented rollback procedure. Rollback should be executable within 15 minutes. Database migrations must be reversible or handled with backward compatibility.
+
+8.7 Deliverables
+- Release Notes
+- Deployment Runbook
+- Rollback Plan
+- Post-Deployment Test Results
+
+8.8 Exit Criteria
+All smoke tests pass in production, no critical incidents raised, release notes published, and monitoring dashboards confirm healthy system state.
+
+--------------------------------------------------------
+9. PHASE 7 – MAINTENANCE AND SUPPORT
+--------------------------------------------------------
+
+9.1 Purpose
+Maintenance ensures the software remains functional, secure, and relevant after release. It represents the longest phase of the SDLC in terms of total duration and often consumes 60–80% of the total lifecycle cost.
+
+9.2 Types of Maintenance
+
+Corrective Maintenance:
+Fix defects discovered in production. Severity determines response time:
+- P1 (Critical): Respond within 1 hour, resolve within 4 hours
+- P2 (High): Respond within 4 hours, resolve within 24 hours
+- P3 (Medium): Resolve within 5 business days
+- P4 (Low): Schedule in next sprint or release
+
+Adaptive Maintenance:
+Modify software to work in a changed environment (OS upgrade, API version change, cloud migration).
+
+Perfective Maintenance:
+Improve performance, code quality, or add minor enhancements based on user feedback.
+
+Preventive Maintenance:
+Proactively refactor code, update dependencies, improve test coverage to prevent future problems.
+
+9.3 Support Tiers
+- L1 Support: First point of contact, handles known issues using runbooks. Escalates unknowns.
+- L2 Support: Technical team handles complex issues not resolved by L1. Root cause analysis.
+- L3 Support: Development team handles issues requiring code changes.
+
+9.4 Monitoring and Observability
+- Application Performance Monitoring (APM): New Relic, Datadog, AppDynamics
+- Log aggregation: ELK Stack (Elasticsearch, Logstash, Kibana), Splunk, CloudWatch
+- Distributed tracing: Jaeger, Zipkin, AWS X-Ray
+- Metrics and dashboards: Grafana, Prometheus
+- Alerting: PagerDuty, Opsgenie with on-call rotation
+
+9.5 Deliverables
+- Incident Reports (Post-Mortems)
+- Change Requests
+- Updated Documentation
+- Dependency Update Records
+
+--------------------------------------------------------
+10. AGILE METHODOLOGY DEEP DIVE
+--------------------------------------------------------
+
+10.1 Scrum Framework
+Scrum is the most widely used Agile framework. It organizes work into time-boxed sprints.
+
+Roles:
+- Product Owner: Owns the product backlog. Prioritizes features based on business value. Writes acceptance criteria. Represents the customer.
+- Scrum Master: Facilitates Scrum ceremonies. Removes impediments. Coaches the team on Agile practices. Does not manage the team.
+- Development Team: Cross-functional, self-organizing team of 3–9 members responsible for delivering the sprint goal.
+
+Artifacts:
+- Product Backlog: Prioritized list of all desired features, enhancements, and fixes. Owned by the Product Owner.
+- Sprint Backlog: Subset of the product backlog selected for the current sprint.
+- Increment: The sum of all completed Product Backlog Items at the end of a sprint. Must meet the Definition of Done.
+
+Ceremonies:
+- Sprint Planning: Team selects backlog items and creates the sprint plan. Duration: 2–4 hours for a 2-week sprint.
+- Daily Standup: 15-minute daily sync. Each member answers: What did I do yesterday? What will I do today? Are there any impediments?
+- Sprint Review: Team demonstrates completed work to stakeholders. Feedback is collected for the product backlog.
+- Sprint Retrospective: Team reflects on their process and identifies improvements.
+- Backlog Refinement: Ongoing process of clarifying and estimating backlog items.
+
+10.2 Definition of Done (DoD)
+A shared agreement on what "done" means for a user story:
+- Code written and peer reviewed
+- Unit tests written and passing
+- Integration tests passing
+- Code deployed to DEV environment
+- Documentation updated
+- Acceptance criteria verified by QA
+- Product Owner sign-off
+
+10.3 Story Points and Velocity
+- Story points measure relative effort (not time)
+- Fibonacci sequence commonly used: 1, 2, 3, 5, 8, 13, 21
+- Velocity = average story points completed per sprint
+- Use velocity for sprint planning and release forecasting
+
+10.4 Kanban
+Kanban is a visual workflow management method. Work items move across columns: To Do → In Progress → Review → Done. Work In Progress (WIP) limits prevent overloading the team.
+
+10.5 SAFe (Scaled Agile Framework)
+SAFe scales Agile to large organizations with multiple teams. It introduces Program Increments (PI) — 8–12 week planning horizons with synchronized sprints across teams. PI Planning is a 2-day event where all teams align on goals for the next PI.
+
+--------------------------------------------------------
+11. DEVOPS AND CI/CD PIPELINE
+--------------------------------------------------------
+
+11.1 DevOps Culture
+DevOps is a cultural and technical movement that breaks down silos between development and operations. Core principles: collaboration, automation, continuous improvement, and shared responsibility for production.
+
+11.2 The Three Ways of DevOps
+- First Way (Flow): Optimize flow from development to operations to customers. Reduce batch sizes, limit WIP, automate handoffs.
+- Second Way (Feedback): Create fast feedback loops at every stage. Monitor production and share learning back to development.
+- Third Way (Continual Learning): Foster a culture of experimentation, learning from failures, and continuous improvement.
+
+11.3 CI/CD Pipeline Stages
+Source Control → Build → Unit Tests → Code Quality → Security Scan → Package → Deploy to Dev → Integration Tests → Deploy to Staging → Performance Tests → Deploy to Production → Monitor
+
+11.4 Containerization and Orchestration
+- Docker: Package applications and dependencies into portable containers
+- Docker Compose: Define multi-container local development environments
+- Kubernetes (K8s): Orchestrate containers at scale. Manages deployment, scaling, healing, and load balancing.
+- Key K8s concepts: Pods, Deployments, Services, ConfigMaps, Secrets, Ingress, Namespaces, HPA (Horizontal Pod Autoscaler)
+- Helm: Package manager for Kubernetes applications
+
+11.5 Cloud Platforms
+- AWS: EC2, ECS, EKS, Lambda, RDS, S3, CloudFront, API Gateway, CodePipeline
+- Azure: AKS, App Service, Azure DevOps, Azure Functions, Cosmos DB
+- GCP: GKE, Cloud Run, Cloud Build, BigQuery, Cloud SQL
+
+11.6 Observability in DevOps
+Four Golden Signals: Latency, Traffic, Errors, Saturation
+SRE (Site Reliability Engineering) concepts:
+- SLI (Service Level Indicator): A measurable metric (e.g., request success rate)
+- SLO (Service Level Objective): A target for an SLI (e.g., 99.9% uptime)
+- SLA (Service Level Agreement): A contract with customers based on SLOs
+- Error Budget: Amount of unreliability allowed within an SLO
+
+--------------------------------------------------------
+12. RISK MANAGEMENT IN SDLC
+--------------------------------------------------------
+
+12.1 Risk Identification
+Risks are identified at project initiation and continuously throughout the lifecycle. Sources of risk:
+- Requirements instability
+- Technical complexity or unknown technologies
+- Key person dependencies
+- Third-party vendor delays
+- Infrastructure or environment issues
+- Security vulnerabilities
+- Regulatory changes
+
+12.2 Risk Assessment
+Each risk is assessed for:
+- Probability: Likelihood of occurrence (Low/Medium/High)
+- Impact: Effect on project if it occurs (Low/Medium/High/Critical)
+- Risk Score = Probability × Impact
+
+12.3 Risk Response Strategies
+- Avoid: Change the plan to eliminate the risk
+- Mitigate: Reduce the probability or impact
+- Transfer: Shift risk to another party (insurance, contracts)
+- Accept: Acknowledge the risk and plan for contingency
+
+12.4 Risk Register
+A living document tracking all identified risks with owner, response plan, status, and trigger conditions. Reviewed at every sprint review or steering committee meeting.
+
+12.5 Common SDLC Risks and Mitigations
+- Scope creep: Formal change control process, clearly defined product backlog
+- Integration failures: Early integration testing, contract-first API design
+- Performance issues: NFR defined upfront, performance testing in CI
+- Security breaches: Shift-left security, regular pen testing, dependency scanning
+- Data loss: Automated backups, tested restore procedures, disaster recovery plans
+
+--------------------------------------------------------
+13. DOCUMENTATION STANDARDS
+--------------------------------------------------------
+
+13.1 Documentation Principles
+Good documentation is:
+- Accurate: Reflects the actual system state
+- Clear: Written for the intended audience
+- Concise: No unnecessary content
+- Current: Updated when the system changes
+- Accessible: Stored where teams can find it
+
+13.2 Types of Documentation
+- Architecture Decision Records (ADRs): Document key technical decisions with context, options considered, and rationale
+- API Documentation: Auto-generated from OpenAPI spec or annotated code
+- Runbooks: Step-by-step operational procedures for common tasks and incidents
+- Onboarding Guides: Help new team members get productive quickly
+- User Manuals: End-user guides for the software
+- Release Notes: Summary of changes, bug fixes, and known issues in each release
+- Post-Mortem Reports: Root cause analysis and corrective actions after incidents
+
+13.3 Documentation Tools
+- Confluence: Team wiki and knowledge base
+- Notion: Flexible documentation and project management
+- GitHub/GitLab Wiki: Documentation close to code
+- Swagger/OpenAPI: API documentation
+- Backstage: Developer portal aggregating all service documentation
+
+--------------------------------------------------------
+14. SECURITY IN SDLC (SECURE SDLC)
+--------------------------------------------------------
+
+14.1 Shift-Left Security
+Security is integrated from the earliest phases of the SDLC rather than being a final gate before release. This dramatically reduces the cost and effort of fixing vulnerabilities.
+
+14.2 Security Activities by Phase
+Planning: Identify regulatory requirements (GDPR, PCI-DSS, HIPAA), define security goals, conduct threat modeling.
+Requirements: Include security requirements — authentication, authorization, data protection, audit logging.
+Design: Apply security design patterns — defense in depth, least privilege, fail securely, secure defaults.
+Implementation: Secure coding guidelines, code linting for security issues, no hardcoded secrets, secrets management (HashiCorp Vault, AWS Secrets Manager).
+Testing: SAST, DAST, dependency scanning, penetration testing.
+Deployment: Secrets injection via environment variables, TLS everywhere, firewall rules, WAF (Web Application Firewall).
+Maintenance: Monitor for new CVEs, patch management, security incident response.
+
+14.3 OWASP Top 10
+The OWASP Top 10 lists the most critical web application security risks:
+1. Broken Access Control
+2. Cryptographic Failures
+3. Injection (SQL, NoSQL, OS, LDAP)
+4. Insecure Design
+5. Security Misconfiguration
+6. Vulnerable and Outdated Components
+7. Identification and Authentication Failures
+8. Software and Data Integrity Failures
+9. Security Logging and Monitoring Failures
+10. Server-Side Request Forgery (SSRF)
+
+14.4 Zero Trust Architecture
+Never trust, always verify. All access requests — inside and outside the network perimeter — must be authenticated and authorized. Key principles: verify identity, least privilege access, assume breach.
+
+--------------------------------------------------------
+15. TOOLS AND TECHNOLOGY STACK
+--------------------------------------------------------
+
+15.1 Project Management Tools
+- JIRA: Issue tracking, sprint planning, reporting
+- Azure DevOps Boards: Work items, backlogs, sprints
+- Trello: Kanban boards for smaller teams
+- Confluence: Documentation and knowledge base
+
+15.2 Development Tools
+- IDEs: VS Code, IntelliJ IDEA, PyCharm, Eclipse
+- Version Control: Git, GitHub, GitLab, Bitbucket
+- API Testing: Postman, Insomnia
+- Database Tools: DBeaver, TablePlus, pgAdmin
+
+15.3 CI/CD Tools
+- Jenkins: Open-source automation server
+- GitHub Actions: Native CI/CD for GitHub repositories
+- GitLab CI/CD: Built into GitLab
+- Azure DevOps Pipelines: Microsoft's CI/CD platform
+- CircleCI: Cloud-based CI/CD
+- ArgoCD: GitOps continuous delivery for Kubernetes
+
+15.4 Testing Tools
+- Unit: JUnit (Java), pytest (Python), Jest (JavaScript)
+- Integration: Testcontainers, WireMock
+- End-to-End: Selenium, Playwright, Cypress
+- Performance: JMeter, k6, Locust
+- Security: SonarQube, OWASP ZAP, Snyk, Trivy
+
+15.5 Monitoring Tools
+- APM: Datadog, New Relic, Dynatrace
+- Logging: ELK Stack, Splunk, Loki
+- Metrics: Prometheus + Grafana
+- Alerting: PagerDuty, Opsgenie
+- Tracing: Jaeger, Zipkin
+
+15.6 Cloud and Infrastructure
+- Cloud: AWS, Azure, GCP
+- IaC: Terraform, Pulumi, CloudFormation
+- Containers: Docker, Podman
+- Orchestration: Kubernetes, Amazon ECS
+- Service Mesh: Istio, Linkerd
+
+--------------------------------------------------------
+16. TEAM ROLES AND RESPONSIBILITIES
+--------------------------------------------------------
+
+16.1 Project Manager (PM)
+Responsible for overall project delivery. Manages scope, schedule, budget, stakeholders, and risks. Facilitates communication across teams and leadership.
+
+16.2 Product Owner (PO)
+Owns the product vision and backlog. Defines user stories, acceptance criteria, and priorities. Acts as the voice of the customer within the development team.
+
+16.3 Business Analyst (BA)
+Bridges business and technology. Elicits and documents requirements. Manages the RTM. Facilitates requirement workshops and UAT.
+
+16.4 Solution Architect
+Defines system architecture and technology choices. Ensures alignment with enterprise standards. Reviews technical designs and advises on architecture decisions.
+
+16.5 Tech Lead / Senior Developer
+Leads technical implementation. Makes day-to-day technical decisions. Mentors junior developers. Owns code quality and technical debt management.
+
+16.6 Software Developer
+Designs, codes, unit tests, and documents software components. Participates in code reviews. Estimates user stories.
+
+16.7 QA Engineer / Tester
+Designs and executes test plans. Manages defect lifecycle. Builds automation test suites. Validates UAT readiness.
+
+16.8 DevOps / Platform Engineer
+Builds and maintains CI/CD pipelines, infrastructure, and monitoring. Ensures deployment reliability and system observability.
+
+16.9 Security Engineer
+Integrates security into SDLC. Conducts threat modeling, security reviews, and penetration testing. Monitors security alerts.
+
+16.10 Scrum Master
+Facilitates Agile ceremonies. Removes blockers. Coaches team on Agile principles. Reports on team velocity and health metrics.
+
+--------------------------------------------------------
+17. METRICS AND KPIs
+--------------------------------------------------------
+
+17.1 Development Metrics
+- Velocity: Story points completed per sprint
+- Lead Time: Time from feature request to production deployment
+- Cycle Time: Time from development start to production deployment
+- Code Coverage: Percentage of code covered by automated tests (target: ≥80%)
+- Technical Debt Ratio: Time to fix all code smells vs total development time
+
+17.2 Quality Metrics
+- Defect Density: Defects per 1,000 lines of code (KLOC)
+- Defect Escape Rate: Percentage of defects found in production vs total defects
+- Mean Time to Detect (MTTD): Average time to identify an incident
+- Mean Time to Resolve (MTTR): Average time to resolve an incident
+- Test Automation Coverage: Percentage of test cases automated
+
+17.3 Delivery Metrics
+- Deployment Frequency: How often deployments to production occur
+- Change Failure Rate: Percentage of deployments causing incidents
+- Release Burndown: Progress toward release scope completion
+
+17.4 DORA Metrics (DevOps Research and Assessment)
+The four key metrics for elite DevOps performance:
+1. Deployment Frequency: Elite = multiple times per day
+2. Lead Time for Changes: Elite = less than 1 hour
+3. Change Failure Rate: Elite = 0–5%
+4. Time to Restore Service: Elite = less than 1 hour
+
+--------------------------------------------------------
+18. GOVERNANCE AND COMPLIANCE
+--------------------------------------------------------
+
+18.1 SDLC Governance
+Governance ensures projects follow standards, policies, and approval processes. Key governance mechanisms:
+- Architecture Review Board (ARB): Reviews and approves architecture decisions
+- Change Advisory Board (CAB): Reviews and approves production changes
+- Steering Committee: Executive oversight, strategic decisions, budget approval
+- Quality Gates: Defined checkpoints at each phase with entry/exit criteria
+
+18.2 Compliance Frameworks
+- ISO/IEC 27001: Information security management
+- ISO/IEC 25010: Software quality characteristics
+- CMMI (Capability Maturity Model Integration): Process maturity levels 1–5
+- SOC 2: Security, availability, and confidentiality controls
+- GDPR: Data privacy requirements for EU citizens
+- PCI-DSS: Payment card data security
+
+18.3 Audit and Traceability
+- All changes to code, configuration, and infrastructure must be logged in version control
+- Requirements must trace to design, implementation, and test cases (RTM)
+- Deployment records must capture who deployed what, when, and the outcome
+- Audit logs must be tamper-proof, retained per policy, and accessible for review
+
+--------------------------------------------------------
+19. CASE STUDY – SAMPLE PROJECT WALKTHROUGH
+--------------------------------------------------------
+
+Project: Customer Self-Service Portal
+
+19.1 Project Background
+A retail bank wanted to replace its legacy call-center-only account management system with a web and mobile self-service portal, enabling customers to view account balances, transfer funds, pay bills, and raise service requests.
+
+19.2 Planning
+- Project duration: 12 months
+- Team: 2 PMs, 1 architect, 4 frontend developers, 5 backend developers, 3 QA engineers, 1 DevOps engineer, 1 security engineer
+- Stack: React (frontend), Java Spring Boot (backend), PostgreSQL, AWS EKS, GitHub Actions
+- Budget: $2.5M
+
+19.3 Requirements
+- 142 functional requirements documented in JIRA
+- Key NFRs: 99.95% availability, <2s page load, 10,000 concurrent users, PCI-DSS compliant
+- External integrations: Core banking system (via REST API), payment gateway, SMS gateway, email service
+
+19.4 Architecture
+- Microservices architecture with 8 services: Auth Service, Account Service, Transfer Service, Bill Payment Service, Notification Service, Document Service, Audit Service, API Gateway
+- Event-driven communication via Apache Kafka for async operations
+- JWT + OAuth2 for authentication and authorization
+
+19.5 Development
+- 24 two-week sprints organized into 4 program increments
+- 847 user stories completed across all sprints
+- Code coverage: 87%
+- 3 production incidents in first 3 months post-launch (all P3/P4)
+
+19.6 Testing
+- 1,240 automated test cases
+- Performance testing: validated 12,000 concurrent users at <1.8s response time
+- Penetration testing: 6 findings (2 Medium, 4 Low) — all resolved before launch
+- UAT: 98.7% test pass rate; 4 defects raised and resolved
+
+19.7 Deployment
+- Blue-green deployment strategy
+- Zero-downtime deployment achieved
+- Gradual rollout: 5% → 25% → 100% over 72 hours
+- Post-launch monitoring: 30-day hypercare with on-call team
+
+19.8 Outcome
+- Call center volume reduced by 42% within 3 months
+- Customer satisfaction score (CSAT) increased from 3.2 to 4.6 out of 5
+- Time to onboard new feature: reduced from 8 weeks to 2 weeks with CI/CD
+
+--------------------------------------------------------
+20. GLOSSARY
+--------------------------------------------------------
+
+ADR – Architecture Decision Record
+API – Application Programming Interface
+APM – Application Performance Monitoring
+ARB – Architecture Review Board
+BA – Business Analyst
+BRD – Business Requirements Document
+CAB – Change Advisory Board
+CI/CD – Continuous Integration / Continuous Delivery
+CMMI – Capability Maturity Model Integration
+CSAT – Customer Satisfaction Score
+CVE – Common Vulnerabilities and Exposures
+DAST – Dynamic Application Security Testing
+DoD – Definition of Done
+DORA – DevOps Research and Assessment
+ERD – Entity-Relationship Diagram
+GDPR – General Data Protection Regulation
+HLD – High-Level Design
+IaC – Infrastructure as Code
+JIRA – Project management and issue tracking tool
+JWT – JSON Web Token
+K8s – Kubernetes
+KPI – Key Performance Indicator
+LLD – Low-Level Design
+MTTD – Mean Time to Detect
+MTTR – Mean Time to Resolve
+NFR – Non-Functional Requirement
+OWASP – Open Web Application Security Project
+PCI-DSS – Payment Card Industry Data Security Standard
+PI – Program Increment (in SAFe)
+PM – Project Manager
+PO – Product Owner
+PR – Pull Request
+RTM – Requirements Traceability Matrix
+SAFe – Scaled Agile Framework
+SAST – Static Application Security Testing
+SDLC – Software Development Life Cycle
+SLA – Service Level Agreement
+SLI – Service Level Indicator
+SLO – Service Level Objective
+SRE – Site Reliability Engineering
+SRS – System Requirements Specification
+TDD – Test-Driven Development
+UAT – User Acceptance Testing
+WBS – Work Breakdown Structure
+WIP – Work In Progress
+
+========================================================
+END OF KT DOCUMENT
+========================================================
